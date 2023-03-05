@@ -81,8 +81,8 @@ nav{
     border: 2px solid var(--two);
 }
 .highlight:hover{
-    opacity: 1;
-    color: var(--light);
+    opacity: 1 !important;
+    color: var(--light) !important;
     background-color: var(--two);
     border: 2px solid var(--light);
 }
