@@ -9,7 +9,7 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 30px;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .landing .left{
     height: calc(100vh - 130px);
