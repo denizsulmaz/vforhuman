@@ -20,31 +20,32 @@
     <link rel="stylesheet" href="css/component.css">
     <link rel="shortcut icon" href="media/VFH.ico" type="image/x-icon">
     <style>
+        a{color: unset;}
         .tittle{
-            margin-top: 15vh;
+            margin-top: 10vh;
             font-size: 35px;
             font-weight: 600;
             letter-spacing: 4px;
-            text-align: center;
             color: var(--main);
         }
         .subTittle{
             margin-top: -10px;
-            text-align: center;
+            /* text-align: center; */
             font-size: 30px;
             font-weight: 800;
             letter-spacing: 1px;
             -webkit-text-stroke: 1.2px var(--main);
+            color: rgba(255, 255, 255, 0) !important;
         }
         .aboutText{
-            width: 60vw;
+            width: 70vw;
             color: rgba(255, 255, 255, 0.814);
             margin: auto;
-            background-color: var(--dark);
-            padding: 25px;
+            /* background-color: var(--dark); */
             border-radius: 20px;
             margin-bottom: 15vh;
             margin-top: 3vh;
+            font-size: 15px;
         }
         hr{
             margin: 0 30px;
@@ -76,9 +77,54 @@
             color: var(--main);
             background-color: var(--light);
         }
+        /* TEAM */
+        .team{
+            width: 70vw;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .team .card{
+            width: 22%;
+            overflow: hidden;
+            text-align: center;
+            color: white !important;
+        }
+        .team .card img{
+            border-radius: 10px;
+            width: 100%;
+            background-color: var(--dark);
+        }
+        .card h3{
+            font-weight: 500;
+            font-size: 15;
+            opacity: 0.9;
+        }
+        .card h5{font-weight: 400;opacity: 0.8;}
+        .align{
+            margin-left: 15vw;
+        }
+        /* --PARTNERS-- */
+        .partners{
+            width: 70vw;
+            margin: 0 15vw;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 12px;
+        }
+        .partners img{
+            width: 100%;
+            padding: 30px;
+        }
+
+
         @media screen and (max-width: 800px){
+        .align{
+            margin-left: 6vw !important;
+        }
             .tittle{
-            margin-top: 10vh;
+            margin-top: 5vh;
             font-size: 35px;
         }
         .subTittle{
@@ -88,12 +134,41 @@
             width: 96vw;
             color: rgba(255, 255, 255, 0.814);
             margin: auto;
-            background-color: var(--dark);
             padding: 18px;
             border-radius: 20px;
             margin-bottom: 5vh;
             margin-top: 3vh;
         }
+        .team{
+            width: 90vw;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .team .card{
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            color: white !important;
+            margin-bottom: 10px;
+        }
+        .card img{
+            width: 250px !important;
+        }
+        /* --PARTNERS-- */
+        .partners{
+            width: 88vw;
+            margin: 0 6vw;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 12px;
+        }
+        .partners img{
+            width: 100%;
+            padding: 30px;
+        }
+
         
         }
     </style>
@@ -149,11 +224,13 @@
         </div>
       
 </div>
-    <!-- -Main- -->
-    <h1 class="tittle">ABOUT</h1>
-    <h2 class="subTittle">#WhoWeAre</h2>
+
 
     <div class="aboutText">
+        <!-- -Main- -->
+        <h1 class="tittle">ABOUT</h1>
+        <h2 class="subTittle">#WhoWeAre</h2>
+        <br>
         <p>
             Our vision is to promote equal rights and opportunities for individuals of all genders. This involves
             advocating for the fair and just treatment of all individuals, regardless of their gender identity or
@@ -174,10 +251,127 @@
             not alone and to strengthen the feeling of togetherness. In this process, we will eliminate the desire
             for monopolization that is deeply rooted in NGOs and social enterprises, and continue to expand
             our circle through partnerships in line with our vision.
-            <br><br>
+            <br>
             #CompletlyIndependent &nbsp; #VFHOnTheStreets &nbsp; #intellectualActivism 
             </p>
     </div>
+
+    <!-- TEAM -->
+    <h1 class="tittle align">BOARD</h1>
+    <h2 class="subTittle align">#CircleFamily</h2>
+    <br>
+    <div class="team row">
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/zahide.webp" alt="">
+                <h3>Zahide Coşkun</h3>
+                <h5>Co-Founder</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/deniz.webp" alt="">
+                <h3>Deniz Sulmaz</h3>
+                <h5>Co-Founder</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/melike.webp" alt="">
+                <h3>Melike Ağansoy</h3>
+                <h5>Co-Founder, Sports Director</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/juliah.webp" alt="">
+                <h3>Juliah S. Champion</h3>
+                <h5>Creative Director</h5>
+            </a>
+        </div>
+        <!-- -- -->
+    </div><br>
+    <!-- -- -->
+    <div class="team row">
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/sevval.webp" alt="">
+                <h3>Şevval Çayır</h3>
+                <h5>Sociology Team Member</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/esma.webp" alt="">
+                <h3>Esma Kassap</h3>
+                <h5>Human Rights Advocacy Team Director</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/oguzhan.webp" alt="">
+                <h3>Oğuzhan Karlı</h3>
+                <h5>Human Rights Advocacy Team Member</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/hasret.webp" alt="">
+                <h3>Hasret Uzak</h3>
+                <h5>Human Rights Advocacy Team Member</h5>
+            </a>
+        </div>
+        <!-- -- -->
+    </div>br
+    <!-- -- -->
+    <div class="team row">
+        <div class="card">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/serra.webp" alt="">
+                <h3>Serra Yıldırım</h3>
+                <h5>Art Team Member</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/lily.webp" alt="">
+                <h3>Lillian Wyse</h3>
+                <h5>Art Team Member & USA Ambassador</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/earn.webp" alt="">
+                <h3>Chanikan Kengluecha</h3>
+                <h5>Project Manager & Thaiand Ambassador</h5>
+            </a>
+        </div>
+        <!-- -- -->
+        <div class="card">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="media/team/dao.webp" alt="">
+                <h3>V4H International DAO</h3>
+                <h5>Decentralized Autonomous Organization (DAO)</h5>
+            </a>
+        </div>
+        <!-- -- -->
+    </div><br>
+    <!-- -PARTNERS- -->
+    <h1 class="tittle align">Partners</h1>
+    <h2 class="subTittle align">#Unite4Goals</h2>
+    <br>
+    <div class="partners">
+        <img src="media/team/partners.webp" alt="partners">
+    </div><br>
+
     <br><hr><br>
     <h1 class="cmTittle">COMMUNITY</h1>
     <a class="joinBtn" href="https://forms.gle/nMBbo2q81LV5HSMv5" target="_blank" rel="noopener noreferrer">Join Now</a>
