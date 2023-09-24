@@ -12,6 +12,20 @@
     --main:#9023FF;
     --light:#F8F1FF;
 }
+.goog-te-gadget{
+    color: #00000000 !important;
+}
+a.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+    color: #0c011600 !important;
+  }
+.VIpgJd-ZVi9od-ORHb-OEVmcd{
+    display: none !important;
+}
+.translater{
+    position: fixed;
+    top: 10vh !important;
+    left: 2vw;
+}
 * {margin: 0;padding: 0;font-family: 'Poppins', sans-serif;box-sizing: border-box;}
 /* ScrollBar_____________________________ */
 html {
@@ -262,7 +276,7 @@ footer .row .right a:hover{
   }
   
   .mobileMenu {
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
   }
