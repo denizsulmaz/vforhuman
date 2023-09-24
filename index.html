@@ -8,6 +8,7 @@
     <meta name='copyright' content='Aktivizm Derneği'>
     <meta name='Legal' content='Aktivizm Derneği'>
     <meta name='language' content='EN'>
+    <meta name='language' content='en'>
     <meta name='robots' content='index,follow'>
     <meta name='author' content='Deniz Sulmaz, denizsulmaz@vforhuman.org'>
     <meta name='designer' content='Deniz Sulmaz'>
@@ -16,6 +17,7 @@
     <meta name='reply-to' content='hi@vforhuman.org'>
     <meta name='coverage' content='Worldwide'>
     <meta name='distribution' content='Global'>
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3TBB5JSS"></script>
 <script>
@@ -25,6 +27,37 @@
 
   gtag('config', 'G-QN3TBB5JSS');
 </script>
+<!-- Redirect to Turkish Page -->
+<script>
+    // Function to get the user's preferred language
+    function getUserLanguage() {
+      // Check if the browser supports navigator.languages
+      if (navigator.languages && navigator.languages.length) {
+        return navigator.languages[0];
+      } else {
+        return navigator.language || navigator.userLanguage;
+      }
+    }
+  
+     // Redirect users from Turkey to the Turkish page
+     function redirectToTurkishPage() {
+       const userLanguage = getUserLanguage().toLowerCase();
+  
+       // Check if the user's language is Turkish or if they are in Turkey
+       if (userLanguage.startsWith('TR') || window.location.href.indexOf('tr.html') !== -1) {
+         // User's language is Turkish or they are already on the Turkish page
+         return;
+       } else {
+         // Redirect to the Turkish page
+         window.location.href = 'tr.html';
+       }
+     }
+  
+    // Call the function to perform the redirection
+    redirectToTurkishPage();
+</script>   
+
+
     <!-- -- -->
     <link rel="shortcut icon" href="media/VFH.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
@@ -34,6 +67,8 @@
 </head>
 
 <body>
+    <div class="translater" id="google_translate_element"></div>
+
     <nav>
             <div>
                 <a class="navLogo" href="#"><img src="media/vforhuman.webp" alt="V FOR HUMAN Logo"></a>
@@ -223,7 +258,7 @@
             </div>
             <div>
                 <a href="https://dsfist.com" target="_blank" rel="noopener noreferrer">
-                    <img src="media/dsfist.webp" alt="DSFIST Enterprises">
+                    <img src="https://dsfist.com/img/fcclogo.png" alt="DSFIST Enterprises">
                 </a>
             </div>
             <div>
@@ -242,5 +277,20 @@ menuIcon.addEventListener('click', function() {
 });
 
 </script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+
+    function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en', includedLanguages: 'en,es,fr,de,ja,ko,tr,it', autoDisplay: false },
+      'google_translate_element'
+    );
+  }
+  </script>
 </body>
 </html>
