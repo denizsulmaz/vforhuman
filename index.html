@@ -29,35 +29,37 @@
 </script>
 <!-- Redirect to Turkish Page -->
 <script>
-    // Function to get the user's preferred language
-    function getUserLanguage() {
-      // Check if the browser supports navigator.languages
-      if (navigator.languages && navigator.languages.length) {
-        return navigator.languages[0];
-      } else {
-        return navigator.language || navigator.userLanguage;
+    // Function to redirect users with Turkish browser language
+    function redirectToTurkishPage() {
+      const userLanguage = navigator.language.toLowerCase();
+  
+      // Check if the user's browser language is Turkish
+      if (userLanguage.startsWith('tr')) {
+        // Redirect to the Turkish page
+        window.location.href = 'tr.html';
       }
     }
   
-     // Redirect users from Turkey to the Turkish page
-     function redirectToTurkishPage() {
-       const userLanguage = getUserLanguage().toLowerCase();
-  
-       // Check if the user's language is Turkish or if they are in Turkey
-       if (userLanguage.startsWith('TR') || window.location.href.indexOf('tr.html') !== -1) {
-         // User's language is Turkish or they are already on the Turkish page
-         return;
-       } else {
-         // Redirect to the Turkish page
-         window.location.href = 'tr.html';
-       }
-     }
-  
     // Call the function to perform the redirection
     redirectToTurkishPage();
-</script>   
-
-
+  </script>
+  <!-- translater -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-QN3TBB5JSS');
+  
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+          { pageLanguage: 'en', includedLanguages: 'en,es,tr,th,fr,de,ja,ko,it', autoDisplay: false },
+        'google_translate_element'
+      );
+    }
+  
+  </script> 
     <!-- -- -->
     <link rel="shortcut icon" href="media/VFH.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
